@@ -16,6 +16,17 @@
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+        <div class="checkboxes">
+          <h3>Contains:</h3>
+          <input type="checkbox" name="special-character" id="special">Special Characters </input>
+          <input type="checkbox" name="number" id="number">Numbers</input>
+          <input type="checkbox" name="lowercase" id="lowercase">Lowercase</input>
+          <input type="checkbox" name="uppercase" id="uppercase">Uppercase</input>
+        </div>
+        <div class="character-length">
+          <h3>How many characters?</h3>
+          <input type="text" name="number" id="character-length">Choose a number between 10 and 64 </input>
+        </div>
         <div class="card-body">
           <textarea
             readonly

@@ -4,6 +4,25 @@ function getPasswordOptions() {
 
 }
 
+//DOM elements - making the html elements resposive with javascript 
+var passwordElement = document.querySelector("#password")
+var generateElement = document.querySelector("#generate")
+var symbolsElement = document.querySelector("#symbols")
+var numbersElement = document.querySelector("#numbers")
+var lowercaseElement = document.querySelector("#lowercase")
+var uppercaseElement = document.querySelector("#uppercase")
+var lengthElement = document.querySelector("#length")
+
+//checks the values of the inputs
+generateElement.addEventListener('click', function() {
+  const length = +lengthElement.value;
+  const symbolsChecked = symbolsElement.checked;
+  const numbersChecked = numbersElement.checked;
+  const lowerChecked = lowercaseElement.checked;
+  const upperChecked = uppercaseElement.checked;
+  console.log(symbolsChecked, numbersChecked, lowerChecked, upperChecked, length);
+});
+
 // Function for getting a random element from an array
 function getRandomSymbol() {
   const symbols = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
@@ -29,13 +48,23 @@ function getRandomUpper() {
 }
 getRandomUpper()
 
+/* what is this for?
+const randomFunction = {
+  symbol: getRandomSymbol(),
+  number: getRandomLower(),
+  lower: getRandomLower(),
+  upper: getRandomUpper()
+}*/
+
+
+
+
 // Function to generate password with user input
 function generatePassword() {
 
 }
 
-// Get references to the #generate element
-var generateBtn = document.querySelector('#generate');
+
 
 // Write password to the #password input
 function writePassword() {
@@ -45,5 +74,3 @@ function writePassword() {
   passwordText.value = password;
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener('click', writePassword);

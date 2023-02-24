@@ -21,7 +21,22 @@ generateElement.addEventListener('click', function() {
   const lowerChecked = lowercaseElement.checked;
   const upperChecked = uppercaseElement.checked;
   console.log(symbolsChecked, numbersChecked, lowerChecked, upperChecked, length);
+
+  password.innerText = generatePassword (symbolsChecked, numbersChecked, lowerChecked, upperChecked, length)
 });
+
+function generatePassword(symbolsChecked, numbersChecked, lowerChecked, upperChecked, length) {
+
+  let generatedPassword = " ";
+
+  const charactersTypes = symbolsChecked + numbersChecked + lowerChecked + upperChecked;
+
+  const charArr = [{symbolsChecked}, {numbersChecked}, {lowerChecked}, {upperChecked}].filter;
+
+  console.log[charArr];
+
+}
+
 
 // Function for getting a random element from an array
 function getRandomSymbol() {
@@ -60,9 +75,7 @@ const randomFunction = {
 
 
 // Function to generate password with user input
-function generatePassword() {
 
-}
 
 
 

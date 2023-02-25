@@ -4,6 +4,13 @@ function getPasswordOptions() {
 
 }
 
+const passwordFunction = {
+  symbol: getRandomSymbol,
+  number: getRandomNumber,
+  lower: getRandomLower,
+  upper: getRandomUpper
+}
+
 //DOM elements - making the html elements resposive with javascript 
 var passwordElement = document.querySelector("#password")
 var generateElement = document.querySelector("#generate")
@@ -25,19 +32,27 @@ generateElement.addEventListener('click', function() {
   password.innerText = generatePassword (symbolsChecked, numbersChecked, lowerChecked, upperChecked, length)
 });
 
-function generatePassword(symbolsChecked, numbersChecked, lowerChecked, upperChecked, length) {
+function generatePassword(symbol, number, lower, upper, length) {
 
-  let generatedPassword = " ";
+  let generatedPassword = "";
 
-  const charactersTypes = symbolsChecked + numbersChecked + lowerChecked + upperChecked;
+  const characterTypes = symbol + number + lower + upper;
+  
+  console.log([characterTypes]);
 
-  const charArr = [{symbolsChecked}, {numbersChecked}, {lowerChecked}, {upperChecked}].filter;
+  const charArr = [{ symbol }, { number }, { lower }, { upper }];
 
-  console.log[charArr];
+  console.log(charArr);
+
+  if (characterTypes === 0) {
+    return "";
+  }
+
+  for (let i = 0; i < length; i += characterTypes) {
+    
+  }
 
 }
-
-
 // Function for getting a random element from an array
 function getRandomSymbol() {
   const symbols = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
@@ -61,29 +76,5 @@ function getRandomUpper() {
   const upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
   console.log(upperCase[Math.floor(Math.random(upperCase) * upperCase.length)]);
 }
-getRandomUpper()
-
-/* what is this for?
-const randomFunction = {
-  symbol: getRandomSymbol(),
-  number: getRandomLower(),
-  lower: getRandomLower(),
-  upper: getRandomUpper()
-}*/
-
-
-
-
-// Function to generate password with user input
-
-
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector('#password');
-
-  passwordText.value = password;
-}
+getRandomUpper();
 

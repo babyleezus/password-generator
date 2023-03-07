@@ -5,15 +5,16 @@ I created a random password generator where users can create secure and complex 
 
 Below is a screenshot of the final webpage. 
 
-![Screen Shot 2023-03-07 at 22 26 49](https://user-images.githubusercontent.com/118462761/223567988-438bd8a0-572f-4b32-a0d7-20d4254ffb69.png)
+![image](https://user-images.githubusercontent.com/118462761/223569915-6e16c237-ff81-4dea-814f-feeae9827353.png)
 
-The final page is deployed at: 
+Deployed application:
+- The final page is deployed at: 
 
 https://babyleezus.github.io/password-generator/
 
 Acknowledgements: 
-https://www.youtube.com/watch?v=iKo9pDKKHnc
-https://www.youtube.com/watch?v=duNmhKgtcsI&t=1701s
-https://www.geeksforgeeks.org/how-to-generate-a-random-password-using-javascript/
-https://stackoverflow.com/questions/1497481/javascript-password-generator
-https://www.tutorialstonight.com/password-generator-in-javascript
+- https://www.youtube.com/watch?v=iKo9pDKKHnc
+- https://www.youtube.com/watch?v=duNmhKgtcsI&t=1701s
+- https://www.geeksforgeeks.org/how-to-generate-a-random-password-using-javascript/
+- https://stackoverflow.com/questions/1497481/javascript-password-generator
+- https://www.tutorialstonight.com/password-generator-in-javascript

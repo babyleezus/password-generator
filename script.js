@@ -29,7 +29,7 @@ generateElement.addEventListener('click', function() {
   const upperChecked = uppercaseElement.checked;
   console.log(symbolsChecked, numbersChecked, lowerChecked, upperChecked, length);
 
-  password.innerText = generatePassword (symbolsChecked, numbersChecked, lowerChecked, upperChecked, length)
+  passwordElement.innerText = generatePassword (symbolsChecked, numbersChecked, lowerChecked, upperChecked, length)
 });
 
 function generatePassword(symbol, number, lower, upper, length) {
@@ -55,11 +55,11 @@ function generatePassword(symbol, number, lower, upper, length) {
       const func = Object.keys(type)[0];
       //console.log(func);
 
-      generatedPassword += passwordFunction[func]();
+      generatedPassword += passwordFunction[func];
     })
   }
 
-  const finalPassword = generatedPassword.slice(0,length);
+  const finalPassword = generatedPassword.slice(0, length);
 
   return finalPassword;
 
@@ -67,25 +67,25 @@ function generatePassword(symbol, number, lower, upper, length) {
 // Function for getting a random element from an array
 function getRandomSymbol() {
   const symbols = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[','~','-','_','.'];
-  console.log(symbols[Math.floor(Math.random(symbols) * symbols.length)]);
+  return symbols[Math.floor(Math.random(symbols) * symbols.length)];
 }
 getRandomSymbol();
 
 function getRandomNumber() {
   const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  console.log(numbers[Math.floor(Math.random(numbers) * numbers.length)]);
+  return numbers[Math.floor(Math.random(numbers) * numbers.length)];
 }
 getRandomNumber()
 
 function getRandomLower() {
   const lowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-  console.log(lowerCase[Math.floor(Math.random(lowerCase) * lowerCase.length)]);
+  return lowerCase[Math.floor(Math.random(lowerCase) * lowerCase.length)];
 }
 getRandomLower()
 
 function getRandomUpper() {
   const upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-  console.log(upperCase[Math.floor(Math.random(upperCase) * upperCase.length)]);
+  return upperCase[Math.floor(Math.random(upperCase) * upperCase.length)];
 }
 getRandomUpper();
 

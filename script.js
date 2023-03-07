@@ -40,7 +40,9 @@ function generatePassword(symbol, number, lower, upper, length) {
   
   console.log([characterTypes]);
 
-  const charArr = [{ symbol }, { number }, { lower }, { upper }];
+  const charArr = [{ symbol }, { number }, { lower }, { upper }].filter(
+    item => Object.values(item)[0]
+  );
 
   console.log(charArr);
 
@@ -49,8 +51,17 @@ function generatePassword(symbol, number, lower, upper, length) {
   }
 
   for (let i = 0; i < length; i += characterTypes) {
-    
+    charArr.forEach(type =>{
+      const func = Object.keys(type)[0];
+      //console.log(func);
+
+      generatedPassword += passwordFunction[func]();
+    })
   }
+
+  const finalPassword = generatedPassword.slice(0,length);
+
+  return finalPassword;
 
 }
 // Function for getting a random element from an array

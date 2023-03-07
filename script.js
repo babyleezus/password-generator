@@ -55,7 +55,7 @@ function generatePassword(symbol, number, lower, upper, length) {
       const func = Object.keys(type)[0];
       //console.log(func);
 
-      generatedPassword += passwordFunction[func];
+      generatedPassword += passwordFunction[func]();
     })
   }
 
